@@ -29,4 +29,5 @@ public class Sales {
     private Date saleDate;
 
     private Double salePrice;
+    
 }
