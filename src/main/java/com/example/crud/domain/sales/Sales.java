@@ -3,10 +3,14 @@ package com.example.crud.domain.sales;
 import java.util.Date;
 import java.util.UUID;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,6 +30,9 @@ public class Sales {
 
     private String saleDescription;
     
+
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     private Date saleDate;
 
     private Double salePrice;

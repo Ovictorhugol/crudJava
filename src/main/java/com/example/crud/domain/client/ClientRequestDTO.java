@@ -1,5 +1,7 @@
 package com.example.crud.domain.client;
 
-public record ClientRequestDTO() {
+import java.util.UUID;
+
+public record ClientRequestDTO(String name, String cpf,String email,  String phonenumber, UUID salesId) {
 
 }
